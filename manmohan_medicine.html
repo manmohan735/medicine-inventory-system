@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine form</title>
+</head>
+<body>
+    <h2>medicine form</h2>
+    <form id="med_form" >
+        <label for="medname">Medicine name:</label>
+        <input type="text" id="medname" name="medname" required>
+
+        <label for="genericname">Generic name:</label>
+        <input type="text" id="genericname" name="genericname" required>
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+
+        <label for="dosagefrom">Dosage from:</label>
+        <input type="text" id="dosagefrom" name="dosagefrom" required>
+
+        <label for="strength">strength:</label>
+        <input type="text" id="strength" name="strength" required>
+
+        <label for="recordedlevel">recorded level:</label>
+        <input type="text" id="recordedlevel" name="recordedlevel" required>
+
+        <label for="desc">Description:</label>
+        <textarea id="desc" name="description" rows="4" cols="50">
+             Enter your description here...
+        </textarea>   
+
+        <input type="submit" value="Submit">
+
+
+    </form>
+
+
+    <table border="1" id="med_table">
+        <thread>
+            <tr>
+                <th>ID</th>
+                <th>Medicine</th>
+                <th>Category</th>
+                <th>strength</th>
+                <th>action</th>
+            </tr>
+        </thread>
+        <tbody id="med_table_body"></tbody>
+    </table>
+
+
+    <script>
+        let form =document.getElementById('med_form');
+        let tablebody=document.getElementById('med_table');
+
+        let id=1;
+
+        form.addEventListener('submit',function(event){
+            event.preventDefault();
+
+            let Medicine=document.getElementById('medname').value;
+            let Category=document.getElementById('category').value;
+            let Strength=document.getElementById('strength').value;
+
+            let row=tablebody.insertRow();
+
+            row.insertCell(0).textContent=id;
+            row.insertCell(1).textContent
+        })
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

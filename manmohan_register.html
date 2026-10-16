@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <style>
+        form {
+            width:400px;
+            margin:50px auto;
+            border:1px solid #ccc;
+            border-radius:10px;
+            background-color: #20b4e1;
+        }
+
+        input,select{
+            width:100%;
+            padding:5px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        label{
+            color:rgb(12, 10, 8);
+            font-size: 15px;
+            font-weight: bold;
+            display: block;
+            margin-top: 8px;
+        }
+
+        .btn{
+            width:auto;
+            padding:8px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        body{
+            background-color: rgb(69, 190, 230);
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: left;color:rgb(42, 112, 187)">Register <hr></h2>
+    <form>
+
+        <label for="u_name">Username:</label>
+        <input type="text" id="u_name" name="u_name" placeholder="user1" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="user1@gmail.com" required>
+
+        <label for="phone">Phone NO:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required> 
+
+
+        <label for="rollno">RollNO:</label>
+        <input type="number" id="rollno" name="rollno" min="1" max="100" required>
+
+
+        <label for="role">Role:</label>
+        <select id="role" name="role" required>
+            <option value="option1">option1</option>
+            <option value="option2">option2</option>
+            <option value="option3">option3</option>
+        </select>
+
+        <input type="submit" class="btn">
+        <input type="reset" class="btn">
+
+
+    </form>
+</body>
+</html>
